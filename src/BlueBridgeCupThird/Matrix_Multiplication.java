@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 输入两个矩阵，分别是m*s，s*n大小。输出两个矩阵相乘的结果。
  * 
  * 输入格式
@@ -27,12 +27,6 @@ import java.util.Scanner;
  * 样例输出
  * -3 2
  * -8 2
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Matrix_Multiplication {
 	

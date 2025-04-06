@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 有一棵 n 个节点的树，树上每个节点都有一个正整数权值。
  * 	 如果一个点被选择了，那么在树上和它相邻的点都不能被选择。求选出的点的权值和最大是多少？
  * 
@@ -41,12 +41,6 @@ import java.util.Scanner;
  * 对于50%的数据， n <= 1000。
  * 对于100%的数据， n <= 100000。
  * 权值均为不超过1000的正整数。
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Node_Selection {
 	

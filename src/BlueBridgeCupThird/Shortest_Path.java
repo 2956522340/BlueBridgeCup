@@ -1,12 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 给定一个n个顶点，m条边的有向图（其中某些边权可能为负，但保证没有负环）。
  * 	 请你计算从1号点到其他点的最短路（顶点从1到n编号）。
  * 
@@ -43,12 +43,6 @@ import java.util.Scanner;
  * 对于10%的数据，n = 2，m = 2。
  * 对于30%的数据，n <= 5，m <= 10。
  * 对于100%的数据，1 <= n <= 20000，1 <= m <= 200000，-10000 <= l <= 10000，保证从任意顶点都能到达其他所有顶点。
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Shortest_Path {
 

@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 编写一个程序，首先输入一个整数，例如5，然后在屏幕上显示如下的图形（5表示行数）：
  * 
  * 	 * * * * *
@@ -13,10 +13,6 @@ import java.util.Scanner;
  *   * *
  *   *
  * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Graphic_Display {
 

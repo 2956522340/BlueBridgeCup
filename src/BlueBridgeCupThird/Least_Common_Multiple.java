@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 已知一个正整数N，问从1~N中任选出三个数，他们的最小公倍数最大可以为多少。
  * 
  * 输入格式
@@ -27,12 +27,6 @@ import java.util.Scanner;
  * 先判断n是不是奇数 ，如果是  直接输出n*(n-1)*(n-2)  
  * 否则判断n能不能被3整除，如果不能，输出n*(n-1)*(n-3)，
  * 否则输出(n-1)*(n-2)*(n-3) 
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Least_Common_Multiple {
 

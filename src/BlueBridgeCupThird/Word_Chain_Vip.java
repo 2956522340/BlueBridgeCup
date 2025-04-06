@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 
 
@@ -9,12 +9,10 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 例如 beast和astonish，如果接成一条龙则变为beastonish，
  * 	 另外相邻的两部分不能存在包含关系，例如at 和 atide 间不能相连。
- * 
- * 
- * @author tugeng
  *
  */
 public class Word_Chain_Vip {

@@ -1,4 +1,4 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 哈夫曼树->对于给定的一个数列，现在请你求出用该数列构造Huffman树的总费用。
  * 
  * 
@@ -37,130 +37,54 @@ import java.util.Scanner;
  * 5 3 8 2 9
  * 样例输出
  * 59
- *
- * @author tugeng
- *
  */
 public class Huffuman_Tree_Vip {
-	
 	public static int endStatus = 0; 
-	
 	public static int mfind(List<Integer> list, int values) {
-		
-		
 		for (int i = 0; i < list.size(); i++) {
-			
 			if (values == list.get(i).intValue()) {
-				
 				return i;
-				
 			}
-			
 		}
-		
 		return -1;
-		
 	}
 	
 	public static int price(List<Integer> list) {
-		
 		int sum = 0;
-		
 //		System.out.println(list.size());
-//		
 //		System.out.println(list);
-		
 		if (list.size() == 2) {
-			
 			sum = list.get(0) + list.get(1);
-			
 			endStatus = 1;
-			
 			return sum;
-			
 		}
-		
 		int min = Collections.min(list);
-		
 		int index = mfind(list, min); 
-
-		
 		list.remove(index);
-		
 		int mind = Collections.min(list);
-		
 		int dndex = mfind(list, mind); 
-		
 		list.remove(dndex);
-		
-		
 		sum = min + mind;
-		
 //		System.out.println("sum: " + sum);
-		
 		list.add(sum);
-		
 		return sum;
-		
 	}
-	
 
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer a = sc.nextInt();
-		
 		List<Integer> l = new ArrayList<Integer>();
-		
 		for (int i = 0; i < a.intValue(); i++) {
-			
 			l.add(sc.nextInt());
-			
 		}
-		
+		sc.close();
 		int rs = 0;
-		
 		int ar;
-		
 		while (endStatus == 0) {
-			
 			ar = price(l);
-			
 //			System.out.println(endStatus + " " + ar);
-			
 			rs += ar;
-			
 		}
-		
-		
 		System.out.println(rs);
-		
-		
 	}
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

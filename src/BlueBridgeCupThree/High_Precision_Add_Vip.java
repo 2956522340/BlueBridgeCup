@@ -1,9 +1,10 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 高精度加法
  * 
  * 输入两个整数a和b，输出这两个整数的和。a和b都不超过100位。
@@ -22,14 +23,11 @@ import java.util.Scanner;
  * 依此类推，即可求出C的所有位。
  * 
  * 最后将C输出即可。
- *
- *
- * @author tugeng
- *
  */
 public class High_Precision_Add_Vip {
 	
 	public static void main(String[] args) {
+		// TODO is bug
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -45,6 +43,7 @@ public class High_Precision_Add_Vip {
 		char[] chh = sgg.toCharArray();
 		
 		char[] maxch;
+		sc.close();
 		
 		int min;
 		
@@ -143,29 +142,3 @@ public class High_Precision_Add_Vip {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

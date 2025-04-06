@@ -1,12 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 前缀表达式
  * 
  * 
@@ -15,11 +15,6 @@ import java.util.Stack;
  * 
  * 样例输出
  * 7
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Prefix_Expression {
 	

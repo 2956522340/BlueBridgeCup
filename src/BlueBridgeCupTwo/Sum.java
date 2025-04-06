@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 求1+2+3+...+n的值。
  * 输入格式

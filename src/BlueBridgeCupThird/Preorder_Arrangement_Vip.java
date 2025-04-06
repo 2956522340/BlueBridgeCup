@@ -1,14 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 给出一棵二叉树的中序与后序排列。求出它的先序排列。
  *  （约定树结点用不同的大写字母表示，长度<=8）。
- * 
- * @author tugeng
- *
  */
 public class Preorder_Arrangement_Vip {
 	

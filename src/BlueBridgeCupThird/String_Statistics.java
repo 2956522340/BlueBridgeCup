@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -7,8 +7,8 @@ import java.util.Scanner;
 import java.util.Set;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 给定一个长度为n的字符串S，还有一个数字L，
  * 	 统计长度大于等于L的出现次数最多的子串（不同的出现可以相交），
  * 	 如果有多个，输出最长的，如果仍然有多个，输出第一次出现最早的。
@@ -35,11 +35,6 @@ import java.util.Set;
  * 数据规模和约定
  * n<=60
  * S中所有字符都是小写英文字母。
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class String_Statistics {
 

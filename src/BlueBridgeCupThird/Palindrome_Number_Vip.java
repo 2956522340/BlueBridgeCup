@@ -1,9 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 例如：给定一个10进制数56，将56加65（即把56从右向左读），得到121是一个回文数。
  * 又如：对于10进制数87：
  * STEP1：87+78 = 165 STEP2：165+561 = 726
@@ -26,12 +27,6 @@ import java.util.Scanner;
  * 
  * 样例输出
  * STEP=6
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Palindrome_Number_Vip {
 	

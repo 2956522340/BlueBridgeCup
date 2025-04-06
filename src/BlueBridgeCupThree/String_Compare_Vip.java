@@ -1,10 +1,10 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description  
  * T 给定两个仅由大写字母或小写字母组成的字符串(长度介于1到10之间)，它们之间的关系是以下4中情况之一：
  * 1：两个字符串长度不等。
  * 比如 Beijing 和 Hebei
@@ -29,69 +29,35 @@ import java.util.Scanner;
  * 
  * 样例输出
  * 3
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class String_Compare_Vip {
 
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		String str1 = sc.next();
-		
 		String str2 = sc.next();
-		
 		sc.close();
-		
 //		System.out.println(str1.toLowerCase());
-//		
 //		System.out.println(str2.toLowerCase());
-		
 //		System.out.println(str1.toLowerCase().equals(str2.toLowerCase()));
-		
 		int no = 0;
-		
 		if (str1.length() != str2.length()) {
-		
 //			System.out.println("1");
-			
 			no = 1;
-			
 		} else {
-			
 			if (str1.equals(str2)) {
-				
 //				System.out.println("2");
 				no = 2;
-				
 			}
-			
 			if (str1.toLowerCase().equals(str2.toLowerCase()) && no == 0) {
-				
 				no = 3;
-				
 			}
-			
 			if (no == 0) {
-				
 				no = 4;
-				
 			}
-			
-			
 		}
-		
-		
 		System.out.println(no);
-		
-		
-		
 	}
-	
 }
 
 

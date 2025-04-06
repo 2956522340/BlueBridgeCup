@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 请编一个程序计算从顶至底的某处的一条路径，使该路径所经过的数字的总和最大。
  * 	 ●每一步可沿左斜线向下或右斜线向下走；
  * 	 ●1＜三角形行数≤100；
@@ -28,13 +28,6 @@ import java.util.Scanner;
  * 
  * 样例输出
  * 30
- * 
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Digital_Triangle {
 	

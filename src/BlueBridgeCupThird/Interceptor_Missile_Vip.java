@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 某国为了防御敌国的导弹袭击，发展出一种导弹拦截系统。
  * 	 但是这种导弹拦截系统有一个缺陷：
  * 	 虽然它的第一发炮弹能够到达任意的高度，
@@ -27,11 +27,6 @@ import java.util.List;
  * 样例输出
  * 6
  * 2
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Interceptor_Missile_Vip {
 	

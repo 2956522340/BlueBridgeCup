@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 利用字母可以组成一些美丽的图形，下面给出了一个例子：
  * ABCDEFG

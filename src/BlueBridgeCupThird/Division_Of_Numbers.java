@@ -1,17 +1,14 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。
  * 	 例如：n=7，k=3，下面三种分法被认为是相同的。
  * 	 1，1，5; 1，5，1; 5，1，1;
  * 	 问有多少种不同的分法。
- * 
- * 
- * @author tugeng
- *
  */
 public class Division_Of_Numbers {
 	

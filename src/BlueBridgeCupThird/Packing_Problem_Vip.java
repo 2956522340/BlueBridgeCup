@@ -1,9 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 要求n个物品中，任取若干个装入箱内，使箱子的剩余空间为最小。
  * 
  * 输入格式
@@ -27,12 +28,6 @@ import java.util.Scanner;
  * 样例输出
  * 0
  * 
- * 
- * 
- * 
- * @author tugeng
- * 
- *
  */
 public class Packing_Problem_Vip {
 	

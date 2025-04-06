@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 道路被用来连接N个牧场，牧场被连续地编号为1到N。每一个牧场都是一个奶牛的家。
  *   你首先要决定那些道路是需要保留的N-1条道路。
  *   
@@ -59,10 +59,6 @@ import java.util.Scanner;
  * 
  * 
  * 有向图的最小生成树又叫: 最小树形图
- * 
- * 
- * @author tugeng
- *
  */
 public class Comfort_Cow {
 	

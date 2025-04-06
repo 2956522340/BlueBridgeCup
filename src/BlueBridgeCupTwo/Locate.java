@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 给出一个包含n个整数的数列，问整数a在数列中的第一次出现还是第几个。
  * 输入格式

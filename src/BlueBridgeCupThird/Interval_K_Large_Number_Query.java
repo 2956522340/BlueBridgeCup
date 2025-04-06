@@ -1,11 +1,11 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 给定一个序列，每次询问序列中第l个数到第r个数中第K大的数是哪个。
  * 
  * 
@@ -19,10 +19,6 @@ import java.util.Scanner;
  * 样例输出
  * 4  (3)
  * 2  (1)
- * 
- * 
- * @author tugeng
- *
  */
 public class Interval_K_Large_Number_Query {
 	

@@ -1,9 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 将整数n分成k份，且每份不能为空，任意两份不能相同(不考虑顺序)。
  * 	 例如：n=7，k=3，下面三种分法被认为是相同的。
  * 	 1，1，5; 1，5，1; 5，1，1;
@@ -13,10 +14,6 @@ import java.util.Scanner;
  * 用到了分类的思想。对于f[i][j]代表i分为j份。我们分为以下两类：
  * 每份都没有1：那么我们只需要将每份都减1然后保证有j份。即加上f[i-j][j]。
  * 至少有一份1：那么我们提出1个1,即加上f[i-1][j-1]
- * 
- * 
- * @author tugeng
- *
  */
 public class Division_Of_Numbers2 {
 	

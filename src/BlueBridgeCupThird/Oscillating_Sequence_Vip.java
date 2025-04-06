@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 　如果一个序列满足下面的性质，我们就将它称为摆动序列：
  * 1. 序列中的所有数都是不大于k的正整数；
  * 2. 序列中至少有两个数。
@@ -23,10 +23,6 @@ import java.util.Scanner;
  * 3 1
  * 3 2
  * 一共有8种，给定k，请求出满足上面要求的序列的个数。
- * 
- * 
- * 
- * @author tugeng
  *
  */
 public class Oscillating_Sequence_Vip {

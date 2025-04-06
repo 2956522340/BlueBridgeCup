@@ -1,16 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 编写一函数lcm，求两个正整数的最小公倍数。
  * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Five_One_LCM {
 	

@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 123321是一个非常特殊的数，它从左边读和从右边读是一样的。
  * 输入一个正整数n，编程求所有这样的5位和6位十进制数，满足数字之和等于n。

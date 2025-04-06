@@ -1,10 +1,10 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description  
  * T FJ在沙盘上写了这样一些字符串：
  * 	 A1 = “A”
  * 	 A2 = “ABA”
@@ -28,36 +28,19 @@ import java.util.Scanner;
  * 3
  * 样例输出
  * ABACABA
- * 
- * 
- * @author tugeng
- *
  */
 public class FJ_String_Vip {
 
 	public static void main(String[] args) {
-		
-		Integer a = new Scanner(System.in).nextInt();
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		
 		String[] str = {"A","B","C","D","E","F","G","H","I","J",
 				"K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-		
-		
-//		if (1 == a.intValue()) {
-//			
-//			System.out.println("A");
-//			
-//		}
-		
-		
-//		String sb = new String("");  // A B C D...
-		
 		String zj = new String("");  // 结果AN...
 		
 		String rs = new String("");  // 结果AN...
-		
-		
-		
 		for (int i = 0; i < a; i++) {
 						
 			rs = zj + str[i] + zj;

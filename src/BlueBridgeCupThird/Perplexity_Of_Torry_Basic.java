@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T Torry从小喜爱数学。一天，老师告诉他，像2、3、5、7……这样的数叫做质数。
  * 	 Torry突然想到一个问题，前10、100、1000、10000……个质数的乘积是多少呢？
  * 	 他把这个问题告诉老师。老师愣住了，一时回答不出来。
@@ -25,12 +25,6 @@ import java.util.Scanner;
  * 样例输出
  * 2
  * 
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Perplexity_Of_Torry_Basic {
 	

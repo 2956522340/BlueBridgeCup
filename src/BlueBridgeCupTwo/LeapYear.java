@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 给定一个年份，判断这一年是不是闰年。
  * 当以下情况之一满足是，这一年是闰年：

@@ -1,12 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.TreeSet;
 import java.util.Iterator;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 给出两个整数集合A、B，求出他们的交集、并集以及B在A中的余集。
  * 
  * 样例输入
@@ -23,10 +23,6 @@ import java.util.Scanner;
  * retainAll 交集
  * remove 查集
  * addAll addAll 并集
- * 
- * 
- * @author tugeng
- *
  */
 public class Set_Operation_Vip {
 	

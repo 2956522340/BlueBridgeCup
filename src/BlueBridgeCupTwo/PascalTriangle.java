@@ -3,6 +3,8 @@ package BlueBridgeCupTwo;
 import java.util.Scanner;
 
 /**
+ * @author guh
+ * @description 
  * 问题描述
  * 杨辉三角又称Pascal三角形，它的第哦i + 1行是（a + b）i的展开式的系数。
  * 它的一个重要性质是：

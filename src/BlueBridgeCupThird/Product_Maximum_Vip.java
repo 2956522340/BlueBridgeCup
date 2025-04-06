@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 设有一个长度为N的数字串，要求选手使用K个乘号将它分成K+1个部分，
  * 	 找出一种分法，使得这K+1个部分的乘积能够为最大。
  *   同时，为了帮助选手能够正确理解题意，主持人还举了如下的一个例子：
@@ -20,10 +20,6 @@ import java.util.Scanner;
  * 
  * 样例输出
  * 62
- * 
- * 
- * 
- * @author tugeng
  *
  */
 public class Product_Maximum_Vip {

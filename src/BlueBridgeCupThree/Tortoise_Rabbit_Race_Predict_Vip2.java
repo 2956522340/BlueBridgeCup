@@ -1,10 +1,10 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.Scanner;
 
 /**
- *  
- * 
+ * @author guh
+ * @description 
  * T 他发现，兔子虽然跑比乌龟快，但它们有众所周知的毛病——骄傲且懒惰 于是在与乌龟的比赛中，一旦任一秒结束后兔子发现自己领先t米或以上
  * 它们就会停下来休息s秒。对于不同的兔子，t，s的数值是不同的， 但是所有的乌龟却是一致——它们不到终点决不停止。
  * 
@@ -20,11 +20,6 @@ import java.util.Scanner;
  * 
  * 
  * 样例输入 10 5 5 2 20 样例输出 D 4 样例输入 10 5 5 1 20 样例输出 R 3 样例输入 10 5 5 3 20 样例输出 T 4
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Tortoise_Rabbit_Race_Predict_Vip2 {
 

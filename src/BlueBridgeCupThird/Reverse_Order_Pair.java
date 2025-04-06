@@ -1,12 +1,12 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 有一颗2n-1个节点的二叉树，它有恰好n个叶子节点，每个节点上写了一个整数。
  * 如果将这棵树的所有叶子节点上的数从左到右写下来，便得到一个序列a[1]…a[n]。
  * 现在想让这个序列中的逆序对数量最少，但唯一的操作就是选树上一个非叶子节点，
@@ -23,11 +23,6 @@ import java.util.Scanner;
  * 
  * 数据规模与约定 对于20%的数据，n <= 5000。 对于100%的数据，1 <= n <= 200000，0 <= a[i]<2^31。
  * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Reverse_Order_Pair {
 

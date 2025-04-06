@@ -1,10 +1,11 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.math.BigDecimal;
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 输入一个正整数n，输出n!的值。 其中n!=1*2*3*…*n。
  * 
  * 	n!可能很大，而计算机能表示的整数范围有限，需要使用高精度计算的方法。
@@ -12,16 +13,15 @@ import java.util.Scanner;
  * 	A[0]表示a的个位，A[1]表示a的十位，依次类推。
  * 	将a乘以一个整数k变为将数组A的每一个元素都乘以k，请注意处理相应的进位。
  * 	首先将a设为1，然后乘2，乘3，当乘到n时，即得到了n!的值。
- * 
- * 
- * @author tugeng
- *
+
  */
 public class High_Precision_Vip2 { 
 	
 	public static void main(String[] args) {
 		
-		Integer a = new Scanner(System.in).nextInt();
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		
 		long startTime=System.currentTimeMillis();   //获取开始时间
 		

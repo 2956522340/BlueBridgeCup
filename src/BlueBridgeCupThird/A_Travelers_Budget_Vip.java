@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 一个旅行家想驾驶汽车以最少的费用从一个城市到另一个城市（假设出发时油箱是空的）。
  *   给定两个城市之间的距离D1、
  *   汽车油箱的容量C（以升为单位）、
@@ -34,12 +35,6 @@ import java.util.Scanner;
  * 
  * 样例输出
  * 26.95
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class A_Travelers_Budget_Vip {
 	

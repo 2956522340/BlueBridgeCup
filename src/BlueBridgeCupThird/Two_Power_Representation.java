@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 任何一个正整数都可以用2进制表示，例如：137的2进制表示为10001001。
  * 	 将这种2进制表示写成2的次幂的和的形式，
  * 	 令次幂高的排在前面，可得到如下表达式：137=2^7+2^3+2^0
@@ -32,11 +32,6 @@ import java.util.Scanner;
  * 
  * 提示
  * 用递归实现会比较简单，可以一边递归一边输出
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Two_Power_Representation {
 	

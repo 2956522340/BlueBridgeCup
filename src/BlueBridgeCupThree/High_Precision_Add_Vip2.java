@@ -1,11 +1,11 @@
-package basic;
+package BlueBridgeCupThree;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * T 高精度加法
  * 
  * 输入两个整数a和b，输出这两个整数的和。a和b都不超过100位。
@@ -24,10 +24,7 @@ import java.util.Scanner;
  * 依此类推，即可求出C的所有位。
  * 
  * 最后将C输出即可。
- *
- *
- * @author tugeng
- *
+
  */
 public class High_Precision_Add_Vip2 {
 	
@@ -39,6 +36,7 @@ public class High_Precision_Add_Vip2 {
 		String sg = sc.nextLine();
 		
 		String sgg = sc.nextLine();
+		sc.close();
 		
 		long startTime=System.currentTimeMillis();   //获取开始时间
 		
@@ -56,34 +54,6 @@ public class High_Precision_Add_Vip2 {
 		//最大测试数据 1 ms
 		System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
 		
-		
-		
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

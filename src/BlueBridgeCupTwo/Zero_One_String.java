@@ -1,8 +1,8 @@
-package basic;
+package BlueBridgeCupTwo;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 对于长度为5位的一个01串，每一位都可能是0或1，一共有32种可能。它们的前几个是：
  * 
  * 00000
@@ -12,9 +12,6 @@ package basic;
  * 00100
  * 
  * 请按从小到大的顺序输出这32种01串。
- * 
- * @author tugeng
- *
  */
 public class Zero_One_String {
 	

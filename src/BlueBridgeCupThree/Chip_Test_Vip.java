@@ -1,9 +1,10 @@
-package basic;
+package BlueBridgeCupThree;
 
 import java.util.Scanner;
 
 /**
- * 
+ * @author guh
+ * @description 
  * 
  * T 有n（2≤n≤20）块芯片，有好有坏，已知好芯片比坏芯片多。
  *	 每个芯片都能用来测试其他芯片。用好芯片测试其他芯片时，能正确给出被测试芯片是好还是坏。
@@ -43,10 +44,6 @@ import java.util.Scanner;
  * 在任意偶数多的芯片里，如果好芯片多于坏芯片，将所有芯片两两分组，根据抽屉原理，则有
  * 1）必有两个好芯片分在一组。
  * 2）同为好芯片的组数一定多于同为坏芯片的组数。
- * 
- * 
- * @author tugeng
- *
  */
 public class Chip_Test_Vip {
 	
@@ -74,6 +71,7 @@ public class Chip_Test_Vip {
 			}
 			
 		}
+		sc.close();
 		
 		
 		int sum = 0;
@@ -97,13 +95,7 @@ public class Chip_Test_Vip {
 			}
 			
 			sum = 0;
-			
-			
-		}
-		
-		
-		
-		
+		}	
 		
 	}
 

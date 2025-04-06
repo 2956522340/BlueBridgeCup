@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 每年冬天，北大未名湖上都是滑冰的好地方。北大体育组准备了许多冰鞋，
  * 	 可是人太多了，每天下午收工后，常常一双冰鞋都不剩。
  * 	 每天早上，租鞋窗口都会排起长龙，假设有还鞋的m个，有需要租鞋的n个。
@@ -25,12 +25,6 @@ import java.util.Scanner;
  * 数据规模和约定
  * m,n∈［0,18］
  * 问题分析
- * 
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class WeiMingHu2 {
 	

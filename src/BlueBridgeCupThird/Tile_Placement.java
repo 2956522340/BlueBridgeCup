@@ -1,10 +1,10 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 有一长度为N(1<=Ｎ<=10)的地板，给定两种不同瓷砖：
  * 	 一种长度为1，另一种长度为2，数目不限。要将这个长度为N的地板铺满，
  * 	 一共有多少种不同的铺法？
@@ -16,11 +16,6 @@ import java.util.Scanner;
  * 		  4=1+1+2		
  *  	 	  4=2+2			
  *  
- *  
- *  
- * 
- * @author tugeng
- *
  */
 public class Tile_Placement {
 	

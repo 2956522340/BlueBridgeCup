@@ -1,11 +1,11 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 有一个n个结点m条边的有向图，请输出他的关联矩阵。
  * 
  * 
@@ -46,11 +46,6 @@ import java.io.InputStreamReader;
  * 
  * 
  * (a -> b : a = -1, b = 1;)
- * 
- * 
- * 
- * @author tugeng
- *
  */
 public class Incidence_Matrix {
 	

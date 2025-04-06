@@ -1,4 +1,4 @@
-package algorithm;
+package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 有n个格子，从左到右放成一排，编号为1-n。
  * 	 共有m次操作，有3种操作类型：
  * 	 1.修改一个格子的权值，
@@ -45,10 +45,6 @@ import java.util.Collections;
  * 对于50%的数据n <= 5000，m <= 5000。
  * 对于100%的数据1 <= n <= 100000，m <= 100000，0 <= 格子权值 <= 10000。
  * 
- * 
- * 
- * 
- * @author tugeng
  *
  */
 public class Operation_Lattices {

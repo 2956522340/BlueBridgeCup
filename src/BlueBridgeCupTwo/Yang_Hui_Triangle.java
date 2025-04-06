@@ -1,13 +1,11 @@
-package basic;
+package BlueBridgeCupTwo;
 
 import java.util.Scanner;
 
 /**
- * 
- * 
+ * @author guh
+ * @description 
  * T 它的一个重要性质是：三角形中的每个数字等于它两肩上的数字相加。
- * 
- * @author tugeng
  *
  */
 
