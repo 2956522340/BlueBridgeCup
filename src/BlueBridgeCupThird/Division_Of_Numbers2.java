@@ -16,33 +16,19 @@ import java.util.Scanner;
  * 至少有一份1：那么我们提出1个1,即加上f[i-1][j-1]
  */
 public class Division_Of_Numbers2 {
-	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		int n, k;  
-		
 		n = sc.nextInt();
-		
 		k = sc.nextInt();
-	    
-		int[][] f = new int[1000][1000];  
-		
+	    sc.close();
+		int[][] f = new int[1000][1000];
         f[1][1]=1;
-        
         for(int i=2;i<=n;i++){  
-        	
             for(int j=1;j<=k && j<=i;j++){ 
-            	
                 f[i][j] = f[i-1][j-1] + f[i-j][j];  
             }
-            
         }  
-        
-        System.out.println(f[n][k]);  
-
+        System.out.println(f[n][k]);
 	}	
-	
-
 }

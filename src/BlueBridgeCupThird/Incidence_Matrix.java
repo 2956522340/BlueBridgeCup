@@ -50,43 +50,21 @@ import java.io.InputStreamReader;
 public class Incidence_Matrix {
 	
 	public static void main(String[] args) throws Exception {
-		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		
 		String[] one = bf.readLine().split(" ");
-		
 		Integer n = Integer.valueOf(one[0]);	// n 个 顶点
-		
 		Integer m = Integer.valueOf(one[1]);	// m 条 边
-		
 		int rs[][] = new int[n + 1][m + 1];
-		
 		for (int i = 1; i <= m; i++) {
-			
 			String two[] = bf.readLine().split(" ");
-			
 			rs[Integer.valueOf(two[0])][i] = 1;
-			
 			rs[Integer.valueOf(two[1])][i] = -1;
-			
 		}
-		
-		
 		for (int i = 1; i <= n; i++) {
-			
 			for (int j = 1; j <= m; j++) {
-			
 				System.out.print(rs[i][j] + " ");
-			
 			}
-			
 			System.out.println();
-			
 		}
-		
-		
-		
 	}
-	
-
 }

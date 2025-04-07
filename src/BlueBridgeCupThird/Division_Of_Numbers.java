@@ -11,42 +11,24 @@ import java.util.Scanner;
  * 	 问有多少种不同的分法。
  */
 public class Division_Of_Numbers {
-	
 	public static int cnt = 0;  
-	
 	public static void dfs(int front, int n, int step) {
-		
 //		System.out.println(front + " " + n + " " + step);
-		
 		if(step == 1) {  
-			
 	        cnt++;  
-	        
 	        return ;  
-	        
 	    }  
-		
 	    for(int i = front; i <= n / step; i++)  
 	        dfs(i, n - i, step - 1);  
-	    
-		
 	}
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		int n, k;  
-		
 		n = sc.nextInt();
-		
 		k = sc.nextInt();
-	    
+		sc.close();
 	    dfs(1, n, k);
-	    
 	    System.out.println(cnt);
-		
 	}
-	
-
 }

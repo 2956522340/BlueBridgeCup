@@ -28,117 +28,60 @@ public class High_Precision_Add_Vip {
 	
 	public static void main(String[] args) {
 		// TODO is bug
-		
 		Scanner sc = new Scanner(System.in);
-		
 		//进位 所以保留一位0
 		String sg = "0" + sc.nextLine();
-		
 		String sgg = "0" + sc.nextLine();
-		
 		long startTime=System.currentTimeMillis();   //获取开始时间
-		
 		char[] ch = sg.toCharArray();
-		
 		char[] chh = sgg.toCharArray();
-		
 		char[] maxch;
 		sc.close();
-		
 		int min;
-		
 		if (ch.length >= chh.length) {
-			
 			maxch = ch.clone();
-			
 			min = chh.length;
-			
 		} else {
-			
 			maxch = chh.clone();
-			
 			min = ch.length;
-			
 		}
-		
 		for (int i =  0; i < maxch.length; i++) {
-			
 			maxch[i] = '0';
-			
 		}
-		
-		
-		
-		
-//		
 //		System.out.println();
-		
 //		System.out.println(maxch.length);
-		
 		//打自己一下，i--
 		for (int i = min - 1; i > 0; i--) {
-			
 //			System.out.println(i);
-			
 			int rs = (int)((ch[i] - '0') + (chh[i] - '0')); 
-			
 //			System.out.println(((rs + (int)(maxch[i] - '0')) % 10));
-			
-			
 			//214 887 进制加数再进制的情况下
 			if (rs + (int)(maxch[i] - '0') >= 10) {
-				
 				maxch[i - 1] = (char)((int)maxch[i - 1] + 1);
-				
 			}
-			
 			maxch[i] = (char)((rs + (int)(maxch[i] - '0')) % 10 + '0');
-			
 //			System.out.println((((int)maxch[i - 1] - '0' + rs)));
-			
 			//char计算后自动转型为int
 			maxch[i - 1] = (char)((((int)maxch[i - 1] - '0' + rs) / 10) + '0'); 
-			
 			//887 214
 //			for (int k =  0; k < maxch.length; k++) {
-//				
 //				System.out.print(maxch[k]);
-//				
 //			}
-//			
 //			System.out.println();
-			
 		}
-		
 		long endTime=System.currentTimeMillis(); //获取结束时间
-		
 		boolean flag = false;
-		
 		//计算的时候倒序，打印的时候正序
 		for (int i =  0; i < maxch.length; i++) {
-						
 			if (maxch[i] != '0') {
-				
 				flag = true;
-				
 			}
-			
 			if (flag) {
-			
 				System.out.print(maxch[i]);
-			
 			}
-			
-
 		}
-		
-		
 		System.out.println();
-		
 		//最大测试数据 0 ms
 		System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
-		
-		
 	}
-	
 }

@@ -32,10 +32,13 @@ import java.util.Set;
  * 3
  */
 public class Perfect_Price_Vip {
+	// 判断是否可以构成回文串
 	public static String is_palindrome(String str, Integer a) {
 		String rs = new String("");
 		char[] chr = str.toCharArray();
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		// 统计每个字符出现的次数
 		for (int i = 0; i < chr.length; i++) {
 			Integer num = map.get(chr[i]);
 			map.put(chr[i], num == null ? 1 : num.intValue() + 1);
@@ -81,70 +84,72 @@ public class Perfect_Price_Vip {
 		sc.close();
 //		System.out.println(str);
 		String rs = is_palindrome(str, a);
-		int min;
+		int min;		// 最小交换次数
 		char[] cr = str.toCharArray();
 		if ("Impossible".equals(rs)) {
-			System.out.println(rs);
+			System.out.println(rs);			// 如果不能构成回文，直接输出
 			return;
 		} else {
 			min = 0;
-			int middle = str.length() - 1;
-			int odd = 0;
-			int oddside = -1;
+			int middle = str.length() - 1;		// 右边界，用于控制右半边收缩
+			int odd = 0;						// 用来标记是否遇到奇数个数的字符
+			int oddside = -1;					// 记录那个奇数字符的位置
 //			outside:
+			// 从左边向右移动指针，处理每一对对称字符
 			for (int i = 0; i <= middle; i++) {
-				char c = cr[i];
-				int k = -1;
-				for (int j = middle; j > i; j--) {
-//					System.out.println(j);
-//					if (i == 17) {
-//						System.out.println(i);
-//						System.out.println(String.valueOf(cr));
-//					}
+				char c = cr[i];		// 当前要处理的字符
+				int k = -1;			// 记录匹配字符在右边的位置
+				// 从右边找和当前字符匹配的字符
+				for (int j = middle; j > i; j--) {		// % 从后往前查找第一个出现的相同字符
 					if (c == cr[j]) {
 						k = j;
 						break;
-					} 
+					}  
+					// 如果走到最后都找不到匹配的字符
 					if (j == i + 1) {
 //						break outside;
-						if (str.length() % 2 != 0) {
-							oddside = i;
-							odd = odd + 1;
+						if (str.length() % 2 != 0) {		// 如果是奇数长度
+							oddside = i;		// 把这个奇数字符放在中间
+							odd++;  // odd -> 2 行212
 						}
 //						continue outside;
 //						k = i;
 						
 					}
 				} // for 2
+				// 如果已经处理过一个奇数字符，就跳过这个
 				if (odd == 1) {
-					odd = odd + 1;
+					odd++;
 					continue;
 				}
+				// 如果当前字符是最后一个
 				if (i == middle) {
 					k = i;
 					if (oddside == -1) {
 						oddside = i;
 					}
 				}
-				int km = 0;
-				if (odd == 0) {
-					km = str.length() - 1 - i;
+				int km = 0;		// 要移动的距离
+				if (odd == 0) {		// 没有发现奇数的字符
+					km = str.length() - 1 - i;  // ammna
 				} else {
 					if (odd == 2) {
 						km = str.length() - i;
 					}
 				}
+				// 把cr[k]的字符移到km的位置（一次次相邻交换）
 				if (k <= km) {
 					//k -> km
 					char ck = cr[k];
 					for (int p = k; p < km; p++) {
 						cr[p] = cr[p + 1];
-						min = min + 1;
+						min++;		 // 每次移动增加一次交换
 					}
 					cr[km] = ck;
-					middle = km - 1;
+					middle = km - 1;		// 每成功匹配一对，右边界向左缩
 				}
 			}  // for 1
+			// 如果是奇数长度，还要把那个奇数字符移到中间
 			if (str.length() % 2 != 0) {
 					char c = cr[oddside];
 					int l = 0;

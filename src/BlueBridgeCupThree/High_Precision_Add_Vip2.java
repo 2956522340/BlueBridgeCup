@@ -29,31 +29,17 @@ import java.util.Scanner;
 public class High_Precision_Add_Vip2 {
 	
 	public static void main(String[] args) {
-		
-		
 		Scanner sc = new Scanner(System.in);
-		
 		String sg = sc.nextLine();
-		
 		String sgg = sc.nextLine();
 		sc.close();
-		
 		long startTime=System.currentTimeMillis();   //获取开始时间
-		
-		
 		BigInteger bsg = new BigInteger(sg);
-		
 		BigInteger bsgg = new BigInteger(sgg);
-		
 		long endTime=System.currentTimeMillis(); //获取结束时间
-		
-		
 		System.out.println(bsg.add(bsgg));
-		
-		
 		//最大测试数据 1 ms
 		System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
-		
 	}
 	
 }

@@ -12,8 +12,9 @@ import java.util.Scanner;
 public class Yang_Hui_Triangle {
 	
 	public static void main(String[] args) {
-		
-		Integer a = new Scanner(System.in).nextInt();
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		
 		int b[][] = new int[a.intValue()][a.intValue()];
 		

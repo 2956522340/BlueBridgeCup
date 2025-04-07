@@ -16,7 +16,6 @@ import java.util.Scanner;
  *   计算结果四舍五入至小数点后两位。
  *   如果无法到达目的地，则输出“No Solution”。
  * 
- * 
  * 输入格式
  * 第一行为4个实数D1、C、D2、P与一个非负整数N；
  * 接下来N行，每行两个实数Di、Pi。
@@ -39,121 +38,60 @@ import java.util.Scanner;
 public class A_Travelers_Budget_Vip {
 	
 	static class Node {
-		
 		public double distance;
-		
 		public double price;
-		
 		public Node(double distance, double price) {
-			
 			this.distance = distance;
-			
 			this.price = price;
-			
 		}
-		
 	}
-	
 	public static List<Node> list = new ArrayList<Node>();
-	
 	public static double cost = 0.0;
-
 	public static void main(String[] args) {
-		
 		DecimalFormat df = new DecimalFormat("#.00");
-		
 		Scanner sc = new Scanner(System.in);
-		
 		// D1、C、D2、P、N
 		Double D1 = sc.nextDouble();	//km
-		
 		Double C = sc.nextDouble();	//l
-		
 		Double D2 = sc.nextDouble();	//km/l
-		
 		Double P = sc.nextDouble();	//y/l
-		
 		Double N = sc.nextDouble();	//N
-		
 		list.add(new Node(0, P));
-		
 		for (int i = 0; i < N; i++) {
-			
 			list.add(new Node(sc.nextDouble(), sc.nextDouble()));
-			
 		}
-		
+		sc.close();
 		list.add(new Node(D1, 0));
-		
 		for (int i = 1; i <= N + 1; i++) {
-			
 			if (D2 * C < list.get(i).distance - list.get(i - 1).distance) {
-				
 				System.out.println("No Solution");
-				
 				return ;
-				
 			}
-			
 		}
-		
-		
 		for (int i = 0; i <= N; i++) {
-			
 			int j = i + 1;
-			
 			double min = list.get(j).price;
-			
 			int index = -1;
-			
 			while (j <= N + 1 && list.get(j).distance - list.get(i).distance <= D2 * C) {
-				
 				if (list.get(j).price < list.get(i).price) {
-					
 					cost += ((list.get(j).distance - list.get(i).distance) / D2) 
 							* list.get(i).price;
-					
 //					cost = ((int)(cost * 100)) / 100.0;
-					
 					i = j - 1;
-					
 					break;
-					
 				}
-				
 				if (list.get(j).price < min) {
-					
 					min = list.get(j).price;
-					
 					index = j;
-					
 				}
-				
 				j++;
-				
 			}
-			
 			if (j <= N + 1 && list.get(j).distance - list.get(i).distance > D2 * C) {
-				
 				cost += ((list.get(index).distance - list.get(i).distance) / D2) 
 						* list.get(i).price;
-				
-//				cost = ((int)(cost * 100)) / 100.0;
-				
 				i = index - 1;
-				
 			}
-			
-			
 		}
-		
 		System.out.println(df.format(cost));
-		
 	}
-	
 }
-
-
-
-
-

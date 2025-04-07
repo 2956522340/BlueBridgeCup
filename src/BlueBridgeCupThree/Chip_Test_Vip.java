@@ -48,55 +48,29 @@ import java.util.Scanner;
 public class Chip_Test_Vip {
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer a = sc.nextInt();
-		
 		int b[][] = new int[a.intValue()][a.intValue()];
-		
 		for (int i = 0; i < a.intValue(); i++) {
-			
 			for (int j = 0; j < a.intValue(); j++) {
-				
 				b[i][j] = sc.nextInt();
-				
 				if (i == j) {
-					
 					b[i][j] = 0;
-					
 				}
-				
-				
 			}
-			
 		}
 		sc.close();
-		
-		
 		int sum = 0;
-		
 		for (int j = 0; j < a.intValue(); j++) {
-			
 			for (int i = 0; i < a.intValue(); i++) {
-				
 				if (b[i][j] == 1) {
-					
 					sum += 1;
-					
 				}
-				
 			}
-			
 			if (sum >= a.intValue() / 2) {
-				
 				System.out.print((j + 1) + " ");
-				
 			}
-			
 			sum = 0;
 		}	
-		
 	}
-
 }

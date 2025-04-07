@@ -17,91 +17,46 @@ import java.util.Scanner;
  * 数据规模与约定 对于30%的数据，KL <= 106； 对于50%的数据，K <= 16， L <= 10； 对于100%的数据，1 <= K,L <=
  * 100。
  */
-public class K_Good_Number2 {
-								   
+public class K_Good_Number2 {   
 	public static final int MOD = 1000000007;
-
 	public static void main(String[] args) {
-		
 		Scanner input = new Scanner(System.in);
-
 		int k = input.nextInt();
-		
 		int l = input.nextInt();
-		
+		input.close();
 		int num = 0;
-		
 		int[][] nums = new int[l][k];
-		
 		for (int i = 0; i < l; i++) {
-			
 			for (int j = 0; j < k; j++) {
-				
 				nums[i][j] = 0;
-				
 			}
-			
 		}
-		
 		for (int j = 1; j < k; j++) {
-			
 			nums[0][j] = 1;
-			
 		}
-		
 		for (int i = 1; i < l; i++) {
-			
 			for (int j = 0; j < k; j++) {
-				
 				int sum = 0;
-				
 				nums[i][j] += nums[i - 1][j] % MOD;
-				
 				for (int m = 0; m < k; m++) {
-					
 					if (Math.abs(m - j) > 1) {
-						
 						sum += nums[i - 1][m] % MOD;
-						
 						sum = sum % MOD;
-						
 					}
-					
 				}
-				
-				
 				nums[i][j] += sum;
-				
 				nums[i][j] = nums[i][j] % MOD;
-				
 			}
-			
 		}
-			
-		
 		int rs = 0;
-		
 		for (int j = 0; j < k; j++) { 
-//			
 //			for (int jj = 0; jj < k; jj++) {
-//				
 //				System.out.print(nums[j][jj] + " ");
-//				
 //			}
-//			
 			rs += nums[l - 1][j];
-			
 			rs = rs % MOD;
-//			
 //			System.out.println();
-//
 		}
-		
-		
 		System.out.println(rs % MOD);
-		
-		
 	}
-	
-
 }

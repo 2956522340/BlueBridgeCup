@@ -1,9 +1,7 @@
 package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Collections;
 
 /**
  * @author guh
@@ -50,82 +48,40 @@ import java.util.Collections;
 public class Operation_Lattices {
 	
 	public static void main(String[] args) throws Exception {
-		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		
 		String[] one = bf.readLine().split(" ");
-		
 		Integer a = Integer.valueOf(one[0]);
-		
 		int toint[] = new int[a]; //初始权值
-		
 		Integer b = Integer.valueOf(one[1]);
-		
 		String[] two = bf.readLine().split(" ");
-		
 		String rs = "";
-		
 		for (int i = 0; i < a; i++) {
-			
 			toint[i] = Integer.valueOf(two[i]);
-			
 		}
-		
-		
 		for (int i = 0; i < b; i++) {
-			
-			
 			String[] three = bf.readLine().split(" ");
-			
 			if (Integer.valueOf(three[0]) == 1) {
-				
 				toint[(Integer.valueOf(three[1]) - 1)] = Integer.valueOf(three[2]);
-				
 			}
-			
 			if (Integer.valueOf(three[0]) == 2) {
-				
 				int sum = 0;
-				
 				for (int c = Integer.valueOf(three[1]) - 1; 
 						c < Integer.valueOf(three[2]); c++) {
-					
 					sum += toint[c];
-					
 				}
-				
 				rs = rs + String.valueOf(sum) + "\n";
-				
 			}
-			
 			if (Integer.valueOf(three[0]) == 3) {
-				
 				int max = 0;
-				
 				for (int c = Integer.valueOf(three[1]) - 1; 
 						c < Integer.valueOf(three[2]); c++) {
-					
 					if (toint[c] > max) {
-						
 						max = toint[c];
-						
 					}
-					
 				}
-				
 				rs = rs + String.valueOf(max) + "\n";
-				
 			}
-			
-			
-			
 		}
-		
-		
 		System.out.println(rs);
-		
-
 	}
-	
-
 }

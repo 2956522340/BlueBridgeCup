@@ -1,13 +1,11 @@
 package BlueBridgeCupThird;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author guh
@@ -61,159 +59,84 @@ import java.util.Scanner;
  * 有向图的最小生成树又叫: 最小树形图
  */
 public class Comfort_Cow {
-	
 	 private static int f[];	// f[i] 记录i结点开始的边的目的结点f[i]
-	 
 	 private static int c[];	// 奶牛安慰的时间
-	 
 	 private static List<edge> l;
-	
 	 private static int sum = 0;
-	
 	 static class edge {
-		 
 	        public int a;
 	        public int b;
 	        public int value;
-	        
 	        edge(int a, int b, int value) {
 	            this.a = a;
 	            this.b = b;
 	            this.value = value;
 	        }
-			
 	    }
 	 
 	 public static int find(int x) {
-		 
 		 if(f[x] == -1) {
-			 
 			 return x;
-			 
 		 }
-		 
 		 return f[x] = find(f[x]);  
-	
 	 }  
 	 
-	 
-	 public static void merge(int x) {  
-		 
+	 public static void merge(int x) {
 		 int t1 = find(l.get(x).a);
-		 
 		 int t2 = find(l.get(x).b);
-		 
 		 if (t1 != t2) {
-			 
 			 f[t1] = t2;
-			 
 			 sum += l.get(x).value;
-			 
 		 }
-		 
-		 
 	 }
 	 
-	 
 	 public static void main(String[] args) throws Exception {
-
 //		 Scanner sc = new Scanner(System.in);
-		 
 		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		 
 //		 Integer n = sc.nextInt();	// n个农场
-//		 
 //		 Integer p = sc.nextInt();	// p条双向路
-		 
 		 String[] valueString = br.readLine().split(" ");
-		 
 		 Integer n = Integer.valueOf(valueString[0]);	// n个农场
-		 
 		 Integer p = Integer.valueOf(valueString[1]);	// p条双向路
-		 
 		 c = new int[n + 1];
-		 
 		 f = new int[n + 1];
-		 
 		 l = new ArrayList<edge>();	// 记录edge
-		 
 		 int minc = Integer.MAX_VALUE;
-		 
 		 for (int i = 1; i <= n; i++) {
-			 
 //			 c[i] = sc.nextInt();
-			 
 			 String one_valueString = br.readLine();
-			 
 			 c[i] = Integer.valueOf(one_valueString);
-			 
 			 f[i] = -1;
-			 
 			 if (c[i] < minc) {
-				 
 				 minc = c[i];
-				 
 			 }
-			 
 		 }
-		 
 		 for (int i = 1; i <= p; i++) {
-			 
 			 valueString = br.readLine().split(" ");
-			 
 //			 int a = sc.nextInt();
-//			 
 //			 int b = sc.nextInt();
-//			 
 //			 int v = sc.nextInt();
-			 
 			 int a = Integer.valueOf(valueString[0]);
-			 
 			 int b = Integer.valueOf(valueString[1]);
-			 
 			 int v = Integer.valueOf(valueString[2]);
-			 
 			 int value = 2 * v + c[a] + c[b];
-			 
 			 edge e = new edge(a, b, value);
-			 
 			 l.add(e);
-			 
 		 }
-		 
 //		 long start_time = System.nanoTime();
-		 
 		 Collections.sort(l, new Comparator<edge>() {
-			 
 			@Override
 			public int compare(edge o1, edge o2) {
-
 				return o1.value - o2.value;
-				
 			}
-			 
 		});
-		 
 		 for (int i = 0; i < p; i++) {
-			 
 			 merge(i);
-			 
 		 }
-		 
 //		 long end_time = System.nanoTime();
-
 		 System.out.println(minc + sum);    //开始所处位置并没有记录所以 + minc
-		
 		 // 130.611000 ms and 118.516000 ms	缓存输入
 		 // 131.843000 ms and 114.265000 ms 非缓存输入
 //		 System.out.println(end_time - start_time);
-		 
 	}
-	 
-	 
 }
-
-
-
-
-

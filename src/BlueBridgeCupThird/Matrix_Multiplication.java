@@ -29,85 +29,41 @@ import java.util.Scanner;
  * -8 2
  */
 public class Matrix_Multiplication {
-	
 	public static int f[][];
-	
 	public static int s[][];
-	
 	public static int Cij(int i, int j) {
-		
-		int ff[][] = f;
-		
-		int ss[][] = s;
-		
 		int sum = 0;
-		
 		for (int k = 0; k < f[0].length; k++) {
-			
 			sum += f[i][k] * s[k][j];
-			 
 		}
-		
 		return sum;
-		
 	}
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer a  = sc.nextInt();
-		
 		Integer b  = sc.nextInt();
-		
 		Integer c  = sc.nextInt();
-		
 		f = new int[a][b];
-		
 		s = new int[b][c];
-		
-		
 		for (int i = 0; i < a; i++) {
-			
 			for (int j = 0; j < b; j++) {
-				
 				f[i][j] = sc.nextInt();
-				
 			}
-			
 		}
-		
 		for (int i = 0; i < b; i++) {
-			
 			for (int j = 0; j < c; j++) {
-				
 				s[i][j] = sc.nextInt();
-				
 			}
-			
-			
 		}
-		
-		
-		
+		sc.close();
 		int rs[][] = new int[a][c];
-		
 		for (int i = 0; i < a; i++) {
-			
 			for (int j = 0; j < c; j++) {
-				
 				rs[i][j] = Cij(i, j);
-				
 				System.out.print(rs[i][j] + " ");
-				
 			}
-			
 			System.out.println();
-			
 		}
-		
-		
-		
 	}
-
 }

@@ -30,43 +30,24 @@ import java.util.Scanner;
  * 30
  */
 public class Digital_Triangle {
-	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer b = sc.nextInt();
-		
 		int a[][] = new int[b + 1][b + 1];
-		
 		for (int i = 1; i <= b; i++) {
-			
 			for (int j = 1; j <= i; j++) {
-				
 				a[i][j] = sc.nextInt();
-				
 				a[i][j] = a[i][j] + Math.max(a[i - 1][j], a[i - 1][j - 1]);
-				
 			}
-			
 		}
-		
+		sc.close();
 		int max = 0;
-		
 		for (int i = 1; i <= b; i++) {
-			
 			if (a[b][i] > max) {
-				
 				max = a[b][i];
-				
 			}
-			
 		}
-		
-		
 		System.out.println(max);
-		
-		
 	}
 
 }

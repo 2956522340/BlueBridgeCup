@@ -91,7 +91,7 @@ public class Reading_Method_Of_Number_Vip {
 		sc.close();
 		int ws = n.length();
 		if (ws <= 4) {
-			for (int i = 0; i < 4 - ws; i++) {
+			for (int i = 0; i < 4 - ws; i++) {		// 不够位就补零
 				rs = "0" + rs;
 			}
 			rs = thousand(n, 1);

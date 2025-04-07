@@ -35,46 +35,14 @@ public class FJ_String_Vip {
 		Scanner sc = new Scanner(System.in);
 		Integer a = sc.nextInt();
 		sc.close();
-		
 		String[] str = {"A","B","C","D","E","F","G","H","I","J",
 				"K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 		String zj = new String("");  // 结果AN...
-		
 		String rs = new String("");  // 结果AN...
 		for (int i = 0; i < a; i++) {
-						
 			rs = zj + str[i] + zj;
-			
 			zj = rs;
-			
-			
 		}
-		
-		
 		System.out.println(rs);
-		
-		
-		
 	}
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

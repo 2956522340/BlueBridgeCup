@@ -1,6 +1,5 @@
 package BlueBridgeCupTwo;
 
-import java.util.Scanner;
 
 /**
  * @author guh

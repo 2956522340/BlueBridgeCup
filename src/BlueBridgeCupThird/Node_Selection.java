@@ -2,7 +2,6 @@ package BlueBridgeCupThird;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -43,73 +42,38 @@ import java.util.Scanner;
  * 权值均为不超过1000的正整数。
  */
 public class Node_Selection {
-	
 	public static Map<Integer, List<Integer>> map;
-	
 	public static int b[][];
-	
 	public static void nodeSelection(int current, int before) {
-			
 		List<Integer> lt = map.get(current);
-		
 		for (int i = 0; i <lt.size(); i++) {
-			
 			if (lt.get(i) != before) {
-				
 				nodeSelection(lt.get(i), current);
-				
 				b[current][1] += b[lt.get(i)][0];
-						
 				b[current][0] += Math.max(b[lt.get(i)][0], b[lt.get(i)][1]);
-				
 			}
-			
 		}
-		
 	}
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		map = new HashMap<Integer, List<Integer>>();
-		
 		Integer a = sc.nextInt();
-		
 		b = new int[a + 1][2];
-		
 		//1 2 3 4
 		for (int i = 1; i <= a; i++) {
-			
 			Integer w = sc.nextInt();
-			
 			map.put(i, new ArrayList<Integer>());
-			
 			b[i][1] = w;
-			
 		}
-		
 		for (int i = 1; i < a; i++) {
-			
 			Integer h = sc.nextInt();   //h -> n
-			
 			Integer n = sc.nextInt();
-			
 			map.get(h).add(n);
-			
 			map.get(n).add(h);  //注意
-			
-			
 		}
-		
-		
+		sc.close();
 		nodeSelection(1, -1);
-		
 		System.out.println(Math.max(b[1][0], b[1][1]));
-		
-
-		
 	}
-
-	
 }

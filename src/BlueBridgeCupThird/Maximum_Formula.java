@@ -33,50 +33,26 @@ import java.util.Scanner;
 public class Maximum_Formula {
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer N = sc.nextInt();
-		
 		Integer K = sc.nextInt();
-		
 		int b[] = new int[N + 1];
-		
 		int sum[] = new int[N + 1];
-		
 		long dp[][] = new long[N + 1][N + 1];
-		
 		for (int i = 1; i <= N; i++) {
-			
 			b[i] = sc.nextInt();
-			
 			sum[i] = sum[i - 1] + b[i];
-			
 			dp[i][0] = sum[i];
-			
 		}
-		
-		
+		sc.close();
 		for(int i = 2; i <= N; i++) { 
-			
 	        int t = Math.min(i - 1, K);  //最多有几个乘号
-	        
 	        for(int j = 1; j <= t; j++) {  //遍历乘号个数
-	        	
 	            for(int l = 2; l <= i; l++) { //遍历乘号位置
-	            	
 	                dp[i][j] = Math.max(dp[i][j], dp[l - 1][j - 1] * (sum[i] - sum[l - 1]));  
-	            
 	            }  
-	        
 	        }  
-	        
 	    }  
-		
-		
 		System.out.println(dp[N][K]);
-		
-		
 	}
-
 }

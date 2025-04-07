@@ -15,27 +15,17 @@ import java.util.Scanner;
  * 
  */
 public class Graphic_Display {
-
 	public static void main(String[] args) {
-		
-		Integer a = new Scanner(System.in).nextInt();
-		
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		for (int i = a; i >= 1; i--) {
-			
 			int p = i;
-			
 			while (p > 0) {
-				
 				System.out.print("*" + " ");
-				
 				p--;
-				
 			} 
-			
 			System.out.println();
-			
 		}
-		
 	}
-	
 }
