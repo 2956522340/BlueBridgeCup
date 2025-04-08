@@ -27,49 +27,20 @@ import java.util.Scanner;
  * 问题分析
  */
 public class WeiMingHu {
-	
-	public static int recursion(int m, int n	) {
-		
+	public static int recursion(int m, int n) {
 		System.out.println(m + " " + n);
-		
 	    if(m < n)
 	        return 0;
-	    
 	    if(n == 0)
 	        return 1;
-	    
 	    return recursion(m-1,n) + recursion(m,n-1);
-		
 	}
 	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer a = sc.nextInt();
-		
 		Integer b = sc.nextInt();
-		
+		sc.close();
 		System.out.println(recursion(a, b));
-		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

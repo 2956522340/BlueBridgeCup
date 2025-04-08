@@ -37,70 +37,37 @@ import java.util.Set;
  * S中所有字符都是小写英文字母。
  */
 public class String_Statistics {
-
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		int n = sc.nextInt();
-		
 		String str = sc.next();
-		
+		sc.close();
 		int max_n = str.length();	// 最大长度
-		
 		LinkedHashMap<String, Integer> map = new LinkedHashMap<String, Integer>(); 
-		
 		for (int i = n; i <= max_n; i++) {
-			
 			for (int j = 0; j + i <= max_n; j++) {
-				
-				
 				int v = map.get(str.substring(j, j + i)) 
 						== null ? 1 : map.get(str.substring(j, j + i)) + 1;
-				
 				map.put(str.substring(j, j + i), v);
-				
-				
 			}
-			
 		}
-		
 		Set<?> set = map.entrySet();
-	     
 	    Iterator<?> it = set.iterator();
-	    
 	    int max = 0;
-	    
 	    String max_str = "";
-	     
 	    while(it.hasNext()) {
-	    	
 	    	@SuppressWarnings("unchecked")
 			Map.Entry<String, Integer> me = (Map.Entry<String, Integer>)it.next();
-	    	
 //	    	System.out.println(me.getKey() + " : " + me.getValue());
-	    	
 	    	if (me.getValue() > max) {
-	    		
 	    		max = me.getValue();
-	    	
 	    		max_str = me.getKey();
-	    		
 	    	}
-	    	
 	    	if (me.getValue() == max 
 	    			&& max_str.length() < me.getKey().length()) {
-	    		
 	    		max_str = me.getKey();
-	    		
 	    	}
-	    	
-	    	
 	    }
-	    
 	    System.out.println(max_str);
-		
-		
 	}
-	
 }

@@ -34,58 +34,34 @@ import java.util.Scanner;
  * 用递归实现会比较简单，可以一边递归一边输出
  */
 public class Two_Power_Representation {
-	
 	public static void recursion(int num, int ws) {
-
 		if (num == 0) {
-			
 			return;
-			
 		}
-		
 		int r = num % 2; // 经典！
-		
 		num = num >> 1;
-		
 		recursion(num, ws + 1);
-		
 		if (num != 0 && r != 0)  // 输入数(经典)
-			
 			System.out.print("+");	
-		
 		if (r != 0) {	// r当前位数
-			
-			if(ws == 1)
-				
+			if(ws == 1) {
 				System.out.print("2");
-			
-	        else {
-	            
-	        		System.out.print("2(");
-	        		
-	            if (ws == 0)
-	            		System.out.print("0");
-	            
-	            else 
-	            		recursion(ws, 0);
-	            
-	            
+			} else {
+	        	System.out.print("2(");
+	            if (ws == 0) {
+	            	System.out.print("0");
+	            } else {
+	            	recursion(ws, 0);
+	            }
 	            System.out.print(")");
-	            
-	            
 	        }
-			
 		}
-		
-		
 	}
 	
 	public static void main(String[] args) {
-		
-		Integer a = new Scanner(System.in).nextInt();
-		
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		recursion(a, 0);
-		
 	}
-
 }

@@ -23,86 +23,37 @@ import java.util.Scanner;
  *
  */
 public class Product_Maximum_Vip {
-	
 	public static String str = "";
-	
 	public static long dp[][] = new long[45][60];
-	
 	// 1  2
 	public static long cut (int s, int r) {
-		
 //		System.out.println(s + " " + r);
-		
 		char[] ch = str.substring(s - 1, r).toCharArray();
-		
 		long rs = 0;
-		
 		for (int i = 0; i < ch.length; i++) {
-			
 			rs = rs * 10 + ch[i] - '0';
-			
 		}
-		
 		return rs;
-		
-		
 	}
 
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer N = sc.nextInt();
-		
 		Integer K = sc.nextInt();
-		
 		str = sc.next();
-		
+		sc.close();
 		for(int i = 1;i <= N; i++) {
-			
 			dp[i][0] = cut(1, i);
-			
 		}
-		
 		for (int i = 2; i <= N; i++) {
-			
 			for (int j = 1; j <= Math.min(K, i - 1); j++) {
-				
 				for (int z = j; z < i; z++) {
-					
 //					if (i==3 && j == 1)
-					
 //					System.out.println(dp[i][j] + "  " + dp[z][j - 1] + " * " + cut(j + 1, i));
-					
 					dp[i][j] = Math.max(dp[i][j], dp[z][j - 1] * cut(z + 1, i));
-					
-					
 				}
-				
 			}
-			
 		}
-		
 		System.out.println(dp[N][K]);
-		
 	}
-	
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

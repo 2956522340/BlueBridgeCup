@@ -27,55 +27,20 @@ import java.util.Scanner;
  * 问题分析
  */
 public class WeiMingHu2 {
-	
 	public static int dp[][];
-	
 	public static int maxn = 20;
-	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer a = sc.nextInt();
-		
 		Integer b = sc.nextInt();
-		
+		sc.close();
 		dp = new int[maxn][maxn];
-		
 		for(int i=1;i<maxn;++i) {
-			
 			dp[i][0]=1;  
-			
 			for(int j=1;j<=i;++j) {
-				
 				dp[i][j]=dp[i-1][j]+dp[i][j-1];  
-			
 			}  
-		
 		}  
-		
-		
 		System.out.println(dp[a][b]);
-		
-		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

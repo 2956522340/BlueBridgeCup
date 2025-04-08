@@ -18,76 +18,39 @@ import java.util.Scanner;
  *  
  */
 public class Tile_Placement {
-	
 	public static void main(String[] args) {
-		
-		Integer a = new Scanner(System.in).nextInt();
-		
+		Scanner sc = new Scanner(System.in);
+		Integer a = sc.nextInt();
+		sc.close();
 		if (a < 1 || a > 10) {
-			
 			return;
-			
 		}
-		
 		int dp[][] = new int[a][a];
-		
 		for (int i = 1; i < a; i++) {
-			
 			dp[i][i] = 1;
-			
 			dp[i][0] = 1;
-			
 			for (int j = 1; j <= i / 2; j++) {
-				
 				if (j == 1) {
-					
 					dp[i][j] = i;
-					
 					continue;
-					
 				}
-				
 				dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
-				
-				
 			}
-			
 			if ((i / 2.0 - i / 2) != 0 && i / 2 < i - 1) {
-				
 				dp[i][i / 2 + 1] = dp[i][i / 2];
-				
 			}
-			
-			
 		}
-		
 		int sum = 1;
-		
 		int s = 1;
-		
 		for (int i = a - 1; i > 0; i--) {
-			
 			if (s > i) break;
-			
 			if (s > i / 2) {
-			
 				sum += dp[i][i - s];
-			
-				
 			} else {
-				
 				sum += dp[i][s];
-				
 			}
-			
 			s++;
-
-			
 		}
-		
 		System.out.println(sum);
-		
-		
 	}
-
 }

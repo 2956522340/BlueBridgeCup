@@ -11,91 +11,41 @@ import java.util.Scanner;
  * 	 此人从A点到B 点共走两次，试找出2条这样的路径，使得取得的数之和为最大。
  */
 public class Square_Fetch_Number_Vip2 {
-	
 	public static int square[][][][] = new int[10][10][10][10];
-	
 	public static int n;
-	
 	public static int a[][] = new int[10][10];
-	
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		n = sc.nextInt();
-		
 		while (true) {
-			
 			int a1 = sc.nextInt();
-			
 			int a2 = sc.nextInt();
-			
 			int a3 = sc.nextInt();
-			
 			if (a1 == 0 && a2 == 0 && a3 == 0) {
-				
 				break;
-				
 			}
-			
 			a[a1][a2] = a3;
-			
 		}
-		
+		sc.close();
 		for (int i=1;i<=n;++i){
-			
 			for (int j=1;j<=n;++j){
-				
 				for (int k=1;k<=n;++k){
-					
 					for (int l=1;l<=n;++l){
-						
 	                    int tmp=0;
-	                    
 	                    tmp=Math.max(tmp,square[i-1][j][k-1][l]);
-	                    
 	                    tmp=Math.max(tmp,square[i-1][j][k][l-1]);
-	                    
 	                    tmp=Math.max(tmp,square[i][j-1][k-1][l]);
-	                    
 	                    tmp=Math.max(tmp,square[i][j-1][k][l-1]);
-	                    
 	                    if (i==k&&j==l) {
-	                    	
 	                    		square[i][j][k][l]=tmp+a[i][j];
-	                    	
 	                    }
-	                    
 	                    else {
-	                    	
 	                    		square[i][j][k][l]=tmp+a[i][j]+a[k][l];
-	                    	
 	                    }
-	                    
-	                    
 	                }
-					
 	            }
-				
 	        }
-			
 	    }
-		
-		
 		System.out.println(square[n][n][n][n]);
-		
-		
 	}
-	
-	
 }
-
-
-
-
-
-
-
-
-
-

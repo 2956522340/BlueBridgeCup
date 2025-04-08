@@ -27,75 +27,41 @@ import java.util.Scanner;
  * 
  */
 public class Perplexity_Of_Torry_Basic {
-	
 	public static boolean is_prime(Integer a) {
-			
 			if(a.intValue() ==2 || a.intValue()==3) {
-				
 				return true;
-				
 			}  
-			
 			//bug所在，不加的话，会判断1为true
 			if (a.intValue() == 1) {
-				
 				return false;
-				
 			}
-			
 	        //不在6的倍数两侧的一定不是质数  
 	        if(a.intValue() % 6!= 1 && a.intValue() % 6!= 5) {
-	        	
 	        	return false;
-	        	
 	        }
-	
 	        //在6的倍数两侧的也可能不是质数  
 	        double tmp = Math.sqrt(a.intValue());  
-	        
 	        for(double i = 5; i <= tmp; i+=6 ) {
-	        	
 	        	if(a.intValue() % i== 0 || a.intValue() % (i+ 2) == 0) {
-	        		
 	        		 return false;  
-	        		
-	        	}
-	
-	        	
+	        	}	
 	        }
-	        
 	        return true;
-	        
-			
 		}
 	
 	public static void main(String[] args) {
-		
-		Integer n = new Scanner(System.in).nextInt();
-		
+		Scanner sc = new Scanner(System.in);
+		Integer n = sc.nextInt();
+		sc.close();
 		int rs = 1;
-		
 		int i = 1;
-		
 		while (n > 0) {
-		
 			i ++;
-			
 			if (is_prime(i)) {
-				
 				rs = ((rs % 50000) * (i % 50000) % 50000);
-				
-				n --;
-				
+				n --;	
 			}
-			
-			
 		}
-		
-		
 		System.out.println(rs);
-		
 	}
-	
-
 }

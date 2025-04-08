@@ -30,46 +30,20 @@ import java.util.Scanner;
  * 
  */
 public class Packing_Problem_Vip {
-	
-	public static int Maxs = 100000; 
-	
+	public static int Maxs = 100000;
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer size = sc.nextInt();
-		
 		Integer n = sc.nextInt();
-		
 		int a[] = new int[n];
-		
 		int dp[] = new int[size + 1];
-		
-		
 		for (int i = 0; i < n; i++) {
-			
 			a[i] = sc.nextInt();
-			
 			for (int j = size; j >= a[i]; j--) {
-				
 				dp[j] = Math.max(dp[j], dp[j-a[i]]+a[i]);
-			
 			}
-			
 		}
-
-		
+		sc.close();
 		System.out.println(size - dp[size]);
-		
-		
 	}
-	
-
 }
-
-
-
-
-
-
-

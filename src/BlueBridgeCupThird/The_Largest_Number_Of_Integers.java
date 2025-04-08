@@ -34,59 +34,31 @@ import java.util.TreeMap;
  *
  */
 public class The_Largest_Number_Of_Integers {
-
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
-		
 		Integer N = sc.nextInt();
-		
 		if (N > 0 && N < 20) {
-		
 		TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
-		
 		for (int i = 0; i < N; i++) {
-			
 			int b = sc.nextInt();
-			
 			int num = map.get(b) == null ? 1 : map.get(b) + 1;
-			
 			map.put(b, num);
-			
 		}
-		
+		sc.close();
 		Set<?> set = map.entrySet();
-		
 		Iterator<?> it = set.iterator();
-		
 		int min = 0;
-		
 		int max_num = 0;
-		
 		while(it.hasNext()) {
-			
 			@SuppressWarnings("unchecked")
 			Entry<Integer, Integer> e = (Entry<Integer, Integer>)it.next();
-			
 //			System.out.println(e.getKey() + " : " + e.getValue());
-			
 			if (e.getValue() > max_num) {
-				
 				max_num = e.getValue();
-				
 				min = e.getKey();
-				
 			}
-			
 		}
-		
-		
 		System.out.println(min);
-		
 		}
-		
-		
 	}
-	
-	
 }
