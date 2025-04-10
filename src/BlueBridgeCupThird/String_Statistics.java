@@ -42,27 +42,42 @@ public class String_Statistics {
 		int n = sc.nextInt();
 		String str = sc.next();
 		sc.close();
+		// 获取字符串S的最长长度
 		int max_n = str.length();	// 最大长度
-		LinkedHashMap<String, Integer> map = new LinkedHashMap<String, Integer>(); 
+		// 使用LinkedHashMap来存储字串及其出现的次数，LinnkedHashMap保证插入的顺序
+		LinkedHashMap<String, Integer> map = new LinkedHashMap<String, Integer>();
+		// 遍历所有可能的字串长度，从n到max_n
 		for (int i = n; i <= max_n; i++) {
+			// 遍历字符串的每个字串，长度为i
 			for (int j = 0; j + i <= max_n; j++) {
-				int v = map.get(str.substring(j, j + i)) 
-						== null ? 1 : map.get(str.substring(j, j + i)) + 1;
-				map.put(str.substring(j, j + i), v);
+				// 获取字串
+				String substring = str.substring(j, j + i);
+				// 如果字串已经在map中，更新它的出现次数，否则初始化为1
+				int v = map.get(substring) 
+						== null ? 1 : map.get(substring) + 1;
+				// 将字串及其出现次数放入map
+				map.put(substring, v);
 			}
 		}
+		// 获取map中所有条目的集合
 		Set<?> set = map.entrySet();
+		// 创建迭代器来遍历所有条目
 	    Iterator<?> it = set.iterator();
-	    int max = 0;
-	    String max_str = "";
+	    // 记录出现次数最多的子串及其出现次数
+	    int max = 0;		// 最大出现次数
+	    String max_str = "";		// 记录最大出现次数的字串
+	    // 遍历所有子串及其出现次数
 	    while(it.hasNext()) {
+	    	// 强制类型转换，获取当前条目（子串及其出现次数）
 	    	@SuppressWarnings("unchecked")
 			Map.Entry<String, Integer> me = (Map.Entry<String, Integer>)it.next();
 //	    	System.out.println(me.getKey() + " : " + me.getValue());
+	    	// 如果当前字串的出现次数大于max，则更新max和max_str
 	    	if (me.getValue() > max) {
 	    		max = me.getValue();
 	    		max_str = me.getKey();
 	    	}
+	    	// 如果当前子串的出现次数大于max，并且它的长度大于当前最大子串的长度，更新max_str为更长的子串
 	    	if (me.getValue() == max 
 	    			&& max_str.length() < me.getKey().length()) {
 	    		max_str = me.getKey();

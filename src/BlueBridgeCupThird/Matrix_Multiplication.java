@@ -23,10 +23,21 @@ import java.util.Scanner;
  * 0 3
  * 1 2
  * 3 1
+ * ----------------------------
+ * 1 0 -1
+ * 1 1 -3
+ * 
+ * 0 3
+ * 1 2
+ * 3 1
+ * 
+ * 1 * 3 + 1 * 2 + 1 + 1
+ * ----------------------------
  * 
  * 样例输出
  * -3 2
  * -8 2
+ * 
  */
 public class Matrix_Multiplication {
 	public static int f[][];

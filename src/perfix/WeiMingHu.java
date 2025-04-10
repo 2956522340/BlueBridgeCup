@@ -1,4 +1,4 @@
-package BlueBridgeCupThird;
+package perfix;
 
 import java.util.Scanner;
 

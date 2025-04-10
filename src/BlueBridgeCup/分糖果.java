@@ -31,6 +31,8 @@ public class 分糖果 {
 			arr[i] = sc.nextInt();
 		}
 		sc.close();
+		
+		
 		while(check(arr)) {
 			given(arr);
 		}
@@ -59,7 +61,7 @@ public class 分糖果 {
 	 * 判断当前是否还需要进行循环了
 	 */
 	public static boolean check(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 1; i < arr.length; i++) {
 			if (arr[i] - arr[i - 1] != 0) {
 				return true;
 			}

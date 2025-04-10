@@ -26,48 +26,86 @@ import java.util.Scanner;
  */
 public class Set_Operation_Vip {
 	
-	public static void Print(TreeSet<Integer> sTreeSet) {
-		Iterator<Integer> it = sTreeSet.iterator();  
-		while (it.hasNext()) {
-			Integer in = it.next();  
-			System.out.print(in + " ");
-		} 
-	}
-	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		TreeSet<Integer> TreeSetA = new TreeSet<Integer>();
-		TreeSet<Integer> TreeSetB = new TreeSet<Integer>();
-		TreeSet<Integer> rs = new TreeSet<Integer>();
-		Integer a = sc.nextInt();
-		while (a > 0) {
-			TreeSetA.add(sc.nextInt());
-			a--;
+		int a = sc.nextInt();
+		TreeSet<Integer> setA = new TreeSet<Integer>();
+		for (int i = 0; i < a; i++) {
+			setA.add(sc.nextInt());
 		}
-		Integer b = sc.nextInt();
-		while (b > 0) {
-			TreeSetB.add(sc.nextInt());
-			b--;
+		int b = sc.nextInt();
+		TreeSet<Integer> setB = new TreeSet<Integer>();
+		for (int i = 0; i < b; i++) {
+			setB.add(sc.nextInt());
 		}
 		sc.close();
-		rs.clear();
-		rs.addAll(TreeSetA);
-		rs.retainAll(TreeSetB);
-		Print(rs);
-		if (!rs.isEmpty())
+		// 交集
+		TreeSet<Integer> inter = new TreeSet<Integer>(setA);
+		inter.retainAll(setB);
+		inter.forEach(x -> System.out.print(x + " "));
+		if (!inter.isEmpty()) {
 			System.out.println();
-		rs.clear();
-		rs.addAll(TreeSetA);
-		rs.addAll(TreeSetB);
-		Print(rs);
-		if (!rs.isEmpty())
+		}
+		
+		// 交集
+		TreeSet<Integer> union = new TreeSet<Integer>(setA);
+		union.addAll(setB);
+		union.forEach(x -> System.out.print(x + " "));
+		if (!union.isEmpty()) {
 			System.out.println();
-		rs.clear();
-		rs.addAll(TreeSetA);
-		rs.retainAll(TreeSetB);
-		TreeSetA.removeAll(rs);
-		Print(TreeSetA);
-		if (!rs.isEmpty())
+		}
+		
+		// 差集
+		TreeSet<Integer> diff = new TreeSet<Integer>(setA);
+		diff.removeAll(setB);
+		diff.forEach(x -> System.out.print(x + " "));
+		if (!diff.isEmpty()) {
 			System.out.println();
+		}
 	}
+	
+//	public static void Print(TreeSet<Integer> sTreeSet) {
+//		Iterator<Integer> it = sTreeSet.iterator();  
+//		while (it.hasNext()) {
+//			Integer in = it.next();  
+//			System.out.print(in + " ");
+//		} 
+//	}
+//	
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		TreeSet<Integer> TreeSetA = new TreeSet<Integer>();
+//		TreeSet<Integer> TreeSetB = new TreeSet<Integer>();
+//		TreeSet<Integer> rs = new TreeSet<Integer>();
+//		Integer a = sc.nextInt();
+//		while (a > 0) {
+//			TreeSetA.add(sc.nextInt());
+//			a--;
+//		}
+//		Integer b = sc.nextInt();
+//		while (b > 0) {
+//			TreeSetB.add(sc.nextInt());
+//			b--;
+//		}
+//		sc.close();
+//		rs.clear();
+//		rs.addAll(TreeSetA);
+//		rs.retainAll(TreeSetB);
+//		Print(rs);
+//		if (!rs.isEmpty())
+//			System.out.println();
+//		rs.clear();
+//		rs.addAll(TreeSetA);
+//		rs.addAll(TreeSetB);
+//		Print(rs);
+//		if (!rs.isEmpty())
+//			System.out.println();
+//		rs.clear();
+//		rs.addAll(TreeSetA);
+//		rs.retainAll(TreeSetB);
+//		TreeSetA.removeAll(rs);
+//		Print(TreeSetA);
+//		if (!rs.isEmpty())
+//			System.out.println();
+//	}
 }

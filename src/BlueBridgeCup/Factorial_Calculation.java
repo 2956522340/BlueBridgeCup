@@ -53,8 +53,5 @@ public class Factorial_Calculation {
 			System.out.print(arr[i]);
 		}
 		System.out.print("\n");
-		for (int i : arr) {
-			System.out.print(i);
-		}
 	}
 }

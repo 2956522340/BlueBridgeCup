@@ -42,38 +42,51 @@ import java.util.Scanner;
  * 权值均为不超过1000的正整数。
  */
 public class Node_Selection {
-	public static Map<Integer, List<Integer>> map;
-	public static int b[][];
-	public static void nodeSelection(int current, int before) {
-		List<Integer> lt = map.get(current);
-		for (int i = 0; i <lt.size(); i++) {
-			if (lt.get(i) != before) {
-				nodeSelection(lt.get(i), current);
-				b[current][1] += b[lt.get(i)][0];
-				b[current][0] += Math.max(b[lt.get(i)][0], b[lt.get(i)][1]);
+	// 邻接表存储树结构
+	public static Map<Integer, List<Integer>> tree;
+	// dp[i][0]表示不选i，dp[i][1]表示选i
+	public static int dp[][];
+	
+	public static void dfs(int current, int parent) {
+		for (int child : tree.get(current)) {
+			if (child != parent) {
+				dfs(child, current);
+				
+				// 当前节点选了，子节点不能选
+				dp[current][1] += dp[child][0];
+				
+				// 当前节点不选，子节点可选或不选，取较大值
+				dp[current][0] += Math.max(dp[child][0], dp[child][1]);
 			}
 		}
 	}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		map = new HashMap<Integer, List<Integer>>();
-		Integer a = sc.nextInt();
-		b = new int[a + 1][2];
-		//1 2 3 4
-		for (int i = 1; i <= a; i++) {
-			Integer w = sc.nextInt();
-			map.put(i, new ArrayList<Integer>());
-			b[i][1] = w;
+		int n = sc.nextInt();
+		
+		dp = new int[n + 1][2];
+		tree = new HashMap<Integer, List<Integer>>();
+		
+		// 初始化树结构与权值
+		for (int i = 1; i <= n; i++) {
+			tree.put(i, new ArrayList<Integer>());
+			dp[i][1] = sc.nextInt();
 		}
-		for (int i = 1; i < a; i++) {
-			Integer h = sc.nextInt();   //h -> n
-			Integer n = sc.nextInt();
-			map.get(h).add(n);
-			map.get(n).add(h);  //注意
+		
+		for (int i = 1; i < n; i++) {
+			int u = sc.nextInt();
+			int v = sc.nextInt();
+			tree.get(u).add(v);
+			tree.get(v).add(u);
 		}
 		sc.close();
-		nodeSelection(1, -1);
-		System.out.println(Math.max(b[1][0], b[1][1]));
+		
+		// 从根节点（假设为1）开始DFS
+		dfs(1, -1);
+		
+		// 输出最大权值和（选或不选根节点)
+		System.out.println(Math.max(dp[1][0], dp[1][1]));
+		
 	}
 }

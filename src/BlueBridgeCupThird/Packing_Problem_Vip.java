@@ -44,6 +44,10 @@ public class Packing_Problem_Vip {
 			}
 		}
 		sc.close();
-		System.out.println(size - dp[size]);
+		if (dp[size] > size) {
+			System.out.println(0);
+		} else {
+			System.out.println(size - dp[size]);
+		}
 	}
 }

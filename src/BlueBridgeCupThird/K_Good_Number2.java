@@ -24,7 +24,6 @@ public class K_Good_Number2 {
 		int k = input.nextInt();
 		int l = input.nextInt();
 		input.close();
-		int num = 0;
 		int[][] nums = new int[l][k];
 		for (int i = 0; i < l; i++) {
 			for (int j = 0; j < k; j++) {
@@ -34,20 +33,25 @@ public class K_Good_Number2 {
 		for (int j = 1; j < k; j++) {
 			nums[0][j] = 1;
 		}
+		// 从第二位（i=1）开始逐级构造DP
 		for (int i = 1; i < l; i++) {
 			for (int j = 0; j < k; j++) {
 				int sum = 0;
 				nums[i][j] += nums[i - 1][j] % MOD;
+				// 累加前一位所有于j不相邻（差值大于1）的数字
 				for (int m = 0; m < k; m++) {
 					if (Math.abs(m - j) > 1) {
 						sum += nums[i - 1][m] % MOD;
 						sum = sum % MOD;
 					}
 				}
+				
+				// 更新当前方案
 				nums[i][j] += sum;
 				nums[i][j] = nums[i][j] % MOD;
 			}
 		}
+		// 累加所有长度为L（即第l-1行）上不同末位的合法方案数
 		int rs = 0;
 		for (int j = 0; j < k; j++) { 
 //			for (int jj = 0; jj < k; jj++) {
